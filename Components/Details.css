@@ -1,0 +1,47 @@
+.DE-main{
+    color: wheat;
+    position: relative;
+    left: 1vw;
+    width: fit-content;
+}
+
+.DE-main h1{
+    width: fit-content;
+    font-size: 35px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.DE-main .DE-icon{
+    color: red;
+    margin-left: 20px;
+}
+
+.DE-main p{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.DE-images{
+    filter: blur(1px);
+    position: relative;
+    width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.DE-images img{
+    margin: 10px;
+    min-width: 15vw;
+    max-width: 30vw;
+    min-height: 15vh;
+    max-height: 30vh;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.DE-images img:hover{
+    transform: scale(0.95);
+    transition: .5s;
+    cursor: pointer;
+}
