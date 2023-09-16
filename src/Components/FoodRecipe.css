@@ -1,0 +1,196 @@
+.FR-main-content{
+    background-color: black;
+    background-image: url(../Images/recipe-bg.jpg);
+    background-size: 100vw auto;
+    color: white;
+    min-height: 100vh;
+    max-height: auto;
+}
+
+.FR-class{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid white;
+    height: 12vh;
+    backdrop-filter: blur(100px);
+}
+
+.FR-class img{
+    margin: 10px;
+    width: 55px;
+    height: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.FR-class h1{
+    margin: 10px;
+    font-size: 45px;
+    height: auto;
+}
+
+.FR-class a{
+    position: absolute;
+    right: 0;
+    border: 1px solid white;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.FR-content{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+    backdrop-filter: blur(100px);
+}
+
+.FR-content img{
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 10px;
+}
+
+.FR-content p{
+    align-items: center;
+    display: flex;
+    font-size: 17px;
+    margin: 0 10px;
+    text-transform: capitalize;
+}
+
+.FR-content p::first-letter{
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.FR-content ol{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    width: 20vw;
+}
+
+.FR-content ol li:first-child{
+    color: red;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.FR-content ol li:first-child::first-letter{
+    font-size: 25px;
+}
+
+.FR-lists{
+    backdrop-filter: blur(50px);
+    min-height: 90vh;
+}
+
+.Healthlabels-lists , .Ingredients-lists{
+    padding: 10px;
+    width: 90vw;
+}
+
+.Healthlabels-lists span:first-child , .Ingredients-lists span:first-child {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: darkgreen;
+    width: 15vw;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.Healthlabels-lists span:first-child img , .Ingredients-lists span:first-child img{
+    margin: 0 10px;
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Healthlabels-lists span:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Healthlabels-lists span:nth-child(2) li{
+    list-style: square;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: auto;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 15px;
+    list-style: none;
+}
+
+.Ingredients-lists span:nth-child(2) {
+    display: flex;
+    width: 98vw;
+    flex-wrap: wrap;
+}
+
+.IN-image{
+    grid-area: image;
+}
+
+.IN-lists0{
+    grid-area: list1;
+}
+.IN-lists1{
+    grid-area: list2;
+}
+.IN-lists2{
+    grid-area: list3;
+}
+
+.Ingredients-lists span:nth-child(2) .IN-lists{
+    list-style: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: auto;
+    border-radius: 10px;
+    text-align: left;
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 'image list0' 'image list1' 'image list2';
+}
+
+
+.Ingredients-lists span:nth-child(2) .IN-lists img{
+    width: 5vw;
+    float: left;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.Ingredients-lists span:nth-child(2) .IN-lists li{
+    margin: 0 10px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: capitalize;
+}
+
+.Ingredients-lists span:nth-child(2) .IN-lists li::first-letter{
+    color: red;
+}
