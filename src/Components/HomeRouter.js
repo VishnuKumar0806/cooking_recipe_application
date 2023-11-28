@@ -18,8 +18,8 @@ const HomeRouter = () => {
     const [reccipes, setRecipes] = useState([]);
     const [value, setValue] = useState([]);
 
-    const suggestionURL = `https://api.edamam.com/auto-complete?app_id=f5e4e480&app_key=8f957f0fc1d870f618a8afa1dbf9a9c7&q=${name}&limit=15`;
-    const recipeDetailsURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${name}&app_id=2fbe98b2&app_key=c2c2723df52e015ce1239045a2896842&ingr=50&random=false`;
+    const suggestionURL = `https://api.edamam.com/auto-complete?app_id=081cadb7&app_key=5a31214de35b6be77698f57ab9b8a776&q=${name}`;
+    const recipeDetailsURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${name}&app_id=5555cdd5&app_key=31ecbe1d8c0fe7634237b6249f5397d5&ingr=15`;
 
     return (
         <React.Fragment>

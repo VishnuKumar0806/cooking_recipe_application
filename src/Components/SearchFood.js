@@ -17,7 +17,7 @@ import Details from './Details.js';
 
 const SearchFood = () => {
 
-    const { name, setName, setSuggestions, suggestionURL, suggestions, setRecipes, recipeDetailsURL, reccipes, setFinalName } = useContext(AppContext);
+    const { name, setName, setSuggestions, suggestionURL, suggestions, setRecipes, recipeDetailsURL, reccipes } = useContext(AppContext);
 
     const [clicked, setClicked] = useState(false);
     const [clicked1, setClicked1] = useState(false);
@@ -43,7 +43,7 @@ const SearchFood = () => {
                 getRecipe();
                 setClicked1(true)
             }
-        }, 10000);
+        }, 1000);
         return () => clearTimeout(timeOutFunction)
     }, [name])
 
