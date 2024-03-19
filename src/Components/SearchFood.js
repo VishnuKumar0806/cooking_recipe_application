@@ -28,6 +28,7 @@ const SearchFood = () => {
                 const data = await fetch(suggestionURL)
                 const result = await data.json()
                 setSuggestions(result);
+                console.log(result);
             }
             const getRecipe = async () => {
                 const data = await fetch(recipeDetailsURL);
@@ -67,16 +68,14 @@ const SearchFood = () => {
                 </div>
                 <div className="suggestion">
                     {
-                        suggestions.map((key, value) => {
-                            return (
-                                <div key={value} onClick={(e) => {
-                                    setName(key)
-                                    setClicked(true)
-                                }} className="suggset">
-                                    <p>{key}<span></span><span></span><span></span><span></span></p>
-                                </div>
-                            )
-                        })
+                        suggestions?.map((key, value) => (
+                            <div key={value} onClick={(e) => {
+                                setName(key)
+                                setClicked(true)
+                            }} className="suggset">
+                                <p>{key}</p>
+                            </div>
+                        ))
                     }
                 </div>
                 <div className="food-details">
