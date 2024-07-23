@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 // routing files
@@ -22,24 +22,15 @@ const HomeRouter = () => {
     const recipeDetailsURL = `https://api.edamam.com/api/recipes/v2?type=public&q=${name}&app_id=5555cdd5&app_key=4f100ae032ba4a88cce0b93ae44b3fcf&ingr=15`;
 
     return (
-        <React.Fragment>
-            <Router>
-                <nav>
-                    <ul>
-                        <li><Link to={""}></Link></li>
-                    </ul>
-                </nav>
-                <div>
-                    <AppContext.Provider value={{ name, setName, suggestions, setSuggestions, reccipes, setRecipes, suggestionURL, recipeDetailsURL, finalName, setFinalName, value, setValue }}>
-                        <Routes>
-                            <Route exact path='' element={<Homepage />} />
-                            <Route path='search' element={<SearchFood />} />
-                            <Route path="search/key" element={<FoodRecipe />} />
-                        </Routes>
-                    </AppContext.Provider>
-                </div>
-            </Router>
-        </React.Fragment>
+        <Router>
+            <AppContext.Provider value={{ name, setName, suggestions, setSuggestions, reccipes, setRecipes, suggestionURL, recipeDetailsURL, finalName, setFinalName, value, setValue }}>
+                <Routes>
+                    <Route exact path='' element={<Homepage />} />
+                    <Route path='homepage' element={<SearchFood />} />
+                    <Route path="homepage/:key" element={<FoodRecipe />} />
+                </Routes>
+            </AppContext.Provider>
+        </Router>
     )
 }
 

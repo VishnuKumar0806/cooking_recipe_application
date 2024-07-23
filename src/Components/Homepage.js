@@ -1,6 +1,6 @@
 import React from "react";
 import './Homepage.css';
-import Logo from '../Images/Logo.png';
+import Logo from '../Images/savorydelishgtslogo.png';
 
 import BG_Image_1 from '../Images/pexels-ash-376464.jpg';
 import BG_Image_2 from '../Images/pexels-dapur-melodi-1109197.jpg';
@@ -40,7 +40,7 @@ const Homepage = () => {
                     <h1>Meal's formula</h1>
                     <p>Plan your meal with this site help.</p>
                     <p>And celebrate your foods</p>
-                    <Link to="/search" className="HP-button">
+                    <Link to="/homepage" className="HP-button">
                         <span><FontAwesomeIcon icon={faKitchenSet} className="HP-icon" /> Get Started</span>
                     </Link>
                 </div>

@@ -33,45 +33,10 @@
 }
 
 .HP-img img:hover{
-    animation-name: animationFlip;
-    animation-duration: 2s;
+    transition: .7s ease all;
+    transform: scale(1.025);
 }
 
-@keyframes animationFlip {
-    0%{
-        transform: rotateY(180deg);
-    }
-    10%{
-        transform: rotateY(360deg);
-    }
-    20%{
-        transform: rotateY(180deg);
-    }
-    30%{
-        transform: rotateY(0deg);
-    }
-    40%{
-        transform: rotateY(18deg);
-    }
-    50%{
-        transform: rotateY(360deg);
-    }
-    60%{
-        transform: rotateY(180deg);
-    }
-    70%{
-        transform: rotateY(0deg);
-    }
-    80%{
-        transform: rotateY(0deg);
-    }
-    90%{
-        transform: rotateY(90deg);
-    }
-    100%{
-        transform: rotateY(0deg);
-    }
-}
 
 .HP-content{
     margin: 10px;

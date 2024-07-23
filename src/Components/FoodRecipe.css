@@ -1,6 +1,6 @@
 .FR-main-content{
     background-color: black;
-    background-image: url(../Images/recipe-bg.jpg);
+    background: url(../Images/recipe-bg.jpg);
     background-size: 100vw auto;
     color: white;
     min-height: 100vh;

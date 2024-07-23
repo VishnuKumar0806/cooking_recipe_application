@@ -23,29 +23,26 @@ const SearchFood = () => {
     const [clicked1, setClicked1] = useState(false);
 
     useEffect(() => {
-        const timeOutFunction = setTimeout(() => {
-            const getSuggestions = async () => {
-                const data = await fetch(suggestionURL)
-                const result = await data.json()
-                setSuggestions(result);
-                console.log(result);
-            }
-            const getRecipe = async () => {
-                const data = await fetch(recipeDetailsURL);
-                const result = await data.json();
-                setRecipes(result);
-                console.log(result);
-            }
-            if (!clicked) {
-                getSuggestions();
-                setClicked1(!clicked)
-            } else {
-                setSuggestions([])
-                getRecipe();
-                setClicked1(true)
-            }
-        }, 1000);
-        return () => clearTimeout(timeOutFunction)
+        const getSuggestions = async () => {
+            const data = await fetch(suggestionURL)
+            const result = await data.json()
+            setSuggestions(result);
+            console.log(result);
+        }
+        const getRecipe = async () => {
+            const data = await fetch(recipeDetailsURL);
+            const result = await data.json();
+            setRecipes(result);
+            console.log(result);
+        }
+        if (!clicked) {
+            getSuggestions();
+            setClicked1(!clicked)
+        } else {
+            setSuggestions([])
+            getRecipe();
+            setClicked1(true)
+        }
     }, [name])
 
     return (
